@@ -1,0 +1,81 @@
+    <div class="navbar">
+      <h1>Secretaria Acadêmica do Ensino Superior</h1>
+      <div class="menu">
+        <ul>
+          <li>
+            <p><i class="far fa-plus-square"></i> Cadastrar</p>
+            <ul class="submenu">
+              <li><a href='/app/aluno/cadastrar'>Alunos</a></li>
+              <li><a href='/app/curso/cadastrar'>Cursos</a></li>
+              <li><a href='/app/motivo/cadastrar'>Motivos</a></li>
+            </ul>
+          </li>
+          <li><a href='/app/aluno/listagem'><i class="far fa-address-card"></i> Listagem</a></li>
+          <li><a href='/app/logout'><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <form class="formCadastro" action="/app/aluno/cadastrar" method="post">
+        <table>
+            <tr>
+              <td><label>Nome</label></td>
+            </tr>
+            <tr>
+              <td><input type="text" name="nome" value="" placeholder="Insira o Nome"></td>
+            </tr>
+            <tr>
+              <td>Nº CI</td>
+              <td>Nº Processo</td>
+            </tr>
+            <tr>
+              <td><input type="text" name="numCI" value="" placeholder="Insira a CI"></td>
+              <td><input type="text" name="numProcesso" value="" placeholder="Insira o número do processo"></td>
+            </tr>
+            <tr>
+              <td>1º Envio</td>
+              <td>Colação de Grau</td>
+            </tr>
+            <tr>
+              <td><input type="text" name="priEnvio" value="" placeholder="Insira a data (dd-mm-aaaa)"></td>
+              <td><input type="text" name="anoGrau" value="" placeholder="Insira a colação de grau (dd-mm-aaaa)"></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" name="concluido" value="">Concluido</td>
+            </tr>
+            <tr>
+              <td><label>Curso</label></td>
+            </tr>
+            <tr>
+              <td>
+                <select class="" name="idCurso" style="width: 100%;">
+                  {loop="$cursos"}
+                  <option value="{$value.idCurso}">{$value.idCurso} - {$value.sigla} - {$value.nomeCurso}</option>
+                  {/loop}
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><label>Motivo</label></td>
+            </tr>
+            <tr>
+              <td>
+                <select class="" name="idMotivo">
+                  {loop="$motivos"}
+                  <option value="{$value.id}">{$value.id} - {$value.motivo}</option>
+                  {/loop}
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="submit" name="" value="Enviar">
+              </td>
+            </tr>
+        </table>
+      </form>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/50093ed56c.js" crossorigin="anonymous"></script>

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-size: 18px;
+  margin: 0;
+  background-color: #F4F4F2;
+  color: #404040;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 22px;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #495464;
+  user-select: none;
+  padding: 10px 10px 0 10px;
+  margin-bottom: 50px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  color: white;
+  font-size: 16px;
+}
+
+.menu ul li {
+  list-style: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.menu p {
+  padding-bottom: 10px;
+}
+
+.menu a, .menu p {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+.submenu {
+  text-align: center;
+  padding-bottom: 10px;
+  line-height: 30px;
+  width: 100px;
+  margin-left: 10px;
+  background: #495464;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  position: absolute;
+  display: none;
+}
+
+.menu ul li:hover > .submenu {
+  display: grid;
+}
+
+.areaBusca {
+  border-color: #495464;
+  background-color: #F4F4F2;
+  border-style: none none inset none;
+  border-radius: 3px;
+  font-size: 20px;
+  height: 2em;
+  width: 40%;
+  margin-bottom: 100px;
+  transition: 0.2s;
+}
+
+.areaBusca:focus {
+  outline: 0;
+  text-indent: 5px;
+  transition: 0.2s;
+}
+
+table {
+  border: solid 2px #404040;
+  width: 80%;
+  margin: auto;
+  table-layout: fixed;
+}
+
+thead {
+  background-color: #495464;
+  color: white;
+}
+
+th {
+  font-weight: lighter;
+}
+
+th, td {
+  padding: 5px;
+}
+
+#codigo {
+  width: 10%;
+}
+
+#numProcesso {
+  width: 23%;
+}
+
+#nome {
+
+}
+
+#alterar {
+  width: 8%;
+}
+
+#concluido {
+  width: 10%;
+}
+
+td button {
+  margin: 0 5px;
+  display: inline-block;
+}

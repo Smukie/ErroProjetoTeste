@@ -1,0 +1,47 @@
+<div class="navbar">
+      <h1>Secretaria Acadêmica do Ensino Superior</h1>
+      <div class="menu">
+        <ul>
+          <li>
+            <p><i class="far fa-plus-square"></i> Cadastrar</p>
+            <ul class="submenu">
+              <li><a href='/app/aluno/cadastrar'>Alunos</a></li>
+              <li><a href='/app/curso/cadastrar'>Cursos</a></li>
+              <li><a href='/app/motivo/cadastrar'>Motivos</a></li>
+            </ul>
+          </li>
+          <li><a href='/app/aluno/listagem'><i class="far fa-address-card"></i> Listagem</a></li>
+          <li><a href='/app/logout'><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+        </ul>
+      </div>
+    </div>
+      <input class="areaBusca" type="text" name="" placeholder="Buscar por aluno">
+      <div class="cadastradosLista">
+        <table>
+          <thead>
+            <tr>
+              <th id="codigo">Código</th>
+              <th id="numProcesso">Número do Processo</th>
+              <th id="nome">Nome</th>
+              <th id="concluido">Concluido</th>
+              <th id="alterar">Alterar</th>
+            </tr>
+          </thead>
+          <tbody>
+            {loop="$alunos"}
+            <tr>
+              <td id="codigo">{$value.idProcesso}</td>
+              <td id="numProcesso">{if="$value.numProcesso == ''"}<strong>Número não cadastrado</strong>{else}{$value.numProcesso}{/if}</td>
+              <td id="nome">{if="$value.nome == ''"}<strong>Nome não cadastrado</strong>{else}{$value.nome}{/if}</td>
+              <td id="concluido">{if="$value.concluido == 1"}<strong>Sim</strong>{else}<strong>Não</strong>{/if}</td>
+              <td id="alterar">
+                <!--<a href='#{$value.idProcesso}'-->
+                <i><button type="button" name="button"><i class="far fa-edit"></button></i>
+              </td>
+            </tr>
+            {/loop}
+          </tbody>
+        </table>
+      </div>
+
+    <script src="https://kit.fontawesome.com/50093ed56c.js" crossorigin="anonymous"></script>
